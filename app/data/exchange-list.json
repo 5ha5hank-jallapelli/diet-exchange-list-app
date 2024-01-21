@@ -1,0 +1,1063 @@
+{
+	"data": [
+    {
+			"id": "cereals",
+			"category": "Cereals",
+			"items": [
+				{
+					"item": "Ragi",
+					"quantity": 30,
+					"carbohydrates": 22.5,
+					"proteins": 2,
+					"fats": 0.3,
+					"energy": 100,
+					"category": "cereals",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 22.5,
+						"proteins": 2,
+						"fats": 0.3,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Rice (Raw Milled)",
+					"quantity": 30,
+					"carbohydrates": 22.5,
+					"proteins": 2,
+					"fats": 0.3,
+					"energy": 100,
+					"category": "cereals",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 22.5,
+						"proteins": 2,
+						"fats": 0.3,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Rice (Parboiled)",
+					"quantity": 30,
+					"carbohydrates": 22.5,
+					"proteins": 2,
+					"fats": 0.3,
+					"energy": 100,
+					"category": "cereals",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 22.5,
+						"proteins": 2,
+						"fats": 0.3,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Puffed Rice",
+					"quantity": 30,
+					"carbohydrates": 22.5,
+					"proteins": 2,
+					"fats": 0.3,
+					"energy": 100,
+					"category": "cereals",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 22.5,
+						"proteins": 2,
+						"fats": 0.3,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Rice Flakes",
+					"quantity": 30,
+					"carbohydrates": 22.5,
+					"proteins": 2,
+					"fats": 0.3,
+					"energy": 100,
+					"category": "cereals",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 22.5,
+						"proteins": 2,
+						"fats": 0.3,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Whole Wheat Flour",
+					"quantity": 30,
+					"carbohydrates": 21,
+					"proteins": 3,
+					"fats": 0.2,
+					"energy": 100,
+					"category": "cereals",
+					"group": "B",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 21,
+						"proteins": 3,
+						"fats": 0.2,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Refined Wheat Flour",
+					"quantity": 30,
+					"carbohydrates": 21,
+					"proteins": 3,
+					"fats": 0.2,
+					"energy": 100,
+					"category": "cereals",
+					"group": "B",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 21,
+						"proteins": 3,
+						"fats": 0.2,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Semolina",
+					"quantity": 30,
+					"carbohydrates": 21,
+					"proteins": 3,
+					"fats": 0.2,
+					"energy": 100,
+					"category": "cereals",
+					"group": "B",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 21,
+						"proteins": 3,
+						"fats": 0.2,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Vermicelli",
+					"quantity": 30,
+					"carbohydrates": 21,
+					"proteins": 3,
+					"fats": 0.2,
+					"energy": 100,
+					"category": "cereals",
+					"group": "B",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 21,
+						"proteins": 3,
+						"fats": 0.2,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Bajra",
+					"quantity": 30,
+					"carbohydrates": 19,
+					"proteins": 3.1,
+					"fats": 1,
+					"energy": 100,
+					"category": "cereals",
+					"group": "C",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 19,
+						"proteins": 3.1,
+						"fats": 1,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Jowar",
+					"quantity": 30,
+					"carbohydrates": 19,
+					"proteins": 3.1,
+					"fats": 1,
+					"energy": 100,
+					"category": "cereals",
+					"group": "C",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 19,
+						"proteins": 3.1,
+						"fats": 1,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Bread",
+					"quantity": 40,
+					"carbohydrates": 21,
+					"proteins": 3.3,
+					"fats": 0.4,
+					"energy": 100,
+					"category": "cereals",
+					"group": "D",
+					"default": {
+						"quantity": 40,
+						"carbohydrates": 21,
+						"proteins": 3.3,
+						"fats": 0.4,
+						"energy": 100
+					}
+				}
+			]
+		},
+		{
+			"id": "pulses",
+			"category": "Pulses",
+			"items": [
+				{
+					"item": "Bengal Gram (Dal)",
+					"quantity": 30,
+					"carbohydrates": 15,
+					"proteins": 6.5,
+					"fats": 0.7,
+					"energy": 100,
+					"category": "pulses",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 15,
+						"proteins": 6.5,
+						"fats": 0.7,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Bengal Gram (Whole)",
+					"quantity": 30,
+					"carbohydrates": 15,
+					"proteins": 6.5,
+					"fats": 0.7,
+					"energy": 100,
+					"category": "pulses",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 15,
+						"proteins": 6.5,
+						"fats": 0.7,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Black Gram (Dal)",
+					"quantity": 30,
+					"carbohydrates": 15,
+					"proteins": 6.5,
+					"fats": 0.7,
+					"energy": 100,
+					"category": "pulses",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 15,
+						"proteins": 6.5,
+						"fats": 0.7,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Green Gram (Dal)",
+					"quantity": 30,
+					"carbohydrates": 15,
+					"proteins": 6.5,
+					"fats": 0.7,
+					"energy": 100,
+					"category": "pulses",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 15,
+						"proteins": 6.5,
+						"fats": 0.7,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Lentil Dal",
+					"quantity": 30,
+					"carbohydrates": 15,
+					"proteins": 6.5,
+					"fats": 0.7,
+					"energy": 100,
+					"category": "pulses",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 15,
+						"proteins": 6.5,
+						"fats": 0.7,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Rajma (Brown)",
+					"quantity": 30,
+					"carbohydrates": 15,
+					"proteins": 6.5,
+					"fats": 0.7,
+					"energy": 100,
+					"category": "pulses",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 15,
+						"proteins": 6.5,
+						"fats": 0.7,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Cow Pea (Brown)",
+					"quantity": 30,
+					"carbohydrates": 15,
+					"proteins": 6.5,
+					"fats": 0.7,
+					"energy": 100,
+					"category": "pulses",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 15,
+						"proteins": 6.5,
+						"fats": 0.7,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Moth Beans",
+					"quantity": 30,
+					"carbohydrates": 15,
+					"proteins": 6.5,
+					"fats": 0.7,
+					"energy": 100,
+					"category": "pulses",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 15,
+						"proteins": 6.5,
+						"fats": 0.7,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Soyabean (Brown)",
+					"quantity": 25,
+					"carbohydrates": 3,
+					"proteins": 9,
+					"fats": 5,
+					"energy": 100,
+					"category": "pulses",
+					"group": "B",
+					"default": {
+						"quantity": 25,
+						"carbohydrates": 3,
+						"proteins": 9,
+						"fats": 5,
+						"energy": 100
+					}
+				}
+			]
+		},
+		{
+			"id": "nuts_and_oilseeds",
+			"category": "Nuts and Oilseeds",
+			"items": [
+				{
+					"item": "Almond",
+					"quantity": 15,
+					"carbohydrates": 1.5,
+					"proteins": 2.5,
+					"fats": 8.5,
+					"energy": 100,
+					"category": "Nuts and Oilseeds",
+					"group": "A",
+					"default": {
+						"quantity": 15,
+						"carbohydrates": 1.5,
+						"proteins": 2.5,
+						"fats": 8.5,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Coconut (Kernel Dry)",
+					"quantity": 15,
+					"carbohydrates": 1.5,
+					"proteins": 2.5,
+					"fats": 8.5,
+					"energy": 100,
+					"category": "Nuts and Oilseeds",
+					"group": "A",
+					"default": {
+						"quantity": 15,
+						"carbohydrates": 1.5,
+						"proteins": 2.5,
+						"fats": 8.5,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Walnut",
+					"quantity": 15,
+					"carbohydrates": 1.5,
+					"proteins": 2.5,
+					"fats": 8.5,
+					"energy": 100,
+					"category": "Nuts and Oilseeds",
+					"group": "A",
+					"default": {
+						"quantity": 15,
+						"carbohydrates": 1.5,
+						"proteins": 2.5,
+						"fats": 8.5,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Pistachio",
+					"quantity": 15,
+					"carbohydrates": 1.5,
+					"proteins": 2.5,
+					"fats": 8.5,
+					"energy": 100,
+					"category": "Nuts and Oilseeds",
+					"group": "A",
+					"default": {
+						"quantity": 15,
+						"carbohydrates": 1.5,
+						"proteins": 2.5,
+						"fats": 8.5,
+						"energy": 100
+					}
+				},
+		
+				{
+					"item": "Groundnuts",
+					"quantity": 17,
+					"carbohydrates": 2.5,
+					"proteins": 3.5,
+					"fats": 7.5,
+					"energy": 100,
+					"category": "Nuts and Oilseeds",
+					"group": "B",
+					"default": {
+						"quantity": 17,
+						"carbohydrates": 2.5,
+						"proteins": 3.5,
+						"fats": 7.5,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Gingelly Seeds Black",
+					"quantity": 17,
+					"carbohydrates": 2.5,
+					"proteins": 3.5,
+					"fats": 7.5,
+					"energy": 100,
+					"category": "Nuts and Oilseeds",
+					"group": "B",
+					"default": {
+						"quantity": 17,
+						"carbohydrates": 2.5,
+						"proteins": 3.5,
+						"fats": 7.5,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Cashew Nuts",
+					"quantity": 17,
+					"carbohydrates": 2.5,
+					"proteins": 3.5,
+					"fats": 7.5,
+					"energy": 100,
+					"category": "Nuts and Oilseeds",
+					"group": "B",
+					"default": {
+						"quantity": 17,
+						"carbohydrates": 2.5,
+						"proteins": 3.5,
+						"fats": 7.5,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Sunflower Seeds",
+					"quantity": 17,
+					"carbohydrates": 2.5,
+					"proteins": 3.5,
+					"fats": 7.5,
+					"energy": 100,
+					"category": "Nuts and Oilseeds",
+					"group": "B",
+					"default": {
+						"quantity": 17,
+						"carbohydrates": 2.5,
+						"proteins": 3.5,
+						"fats": 7.5,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Garden Cress Seeds",
+					"quantity": 22,
+					"carbohydrates": 7.5,
+					"proteins": 5,
+					"fats": 5,
+					"energy": 100,
+					"category": "Nuts and Oilseeds",
+					"group": "C",
+					"default": {
+						"quantity": 22,
+						"carbohydrates": 7.5,
+						"proteins": 5,
+						"fats": 5,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Coconut (Fresh)",
+					"quantity": 25,
+					"carbohydrates": 1.5,
+					"proteins": 1,
+					"fats": 10,
+					"energy": 100,
+					"category": "Nuts and Oilseeds",
+					"group": "D",
+					"default": {
+						"quantity": 25,
+						"carbohydrates": 1.5,
+						"proteins": 1,
+						"fats": 10,
+						"energy": 100
+					}
+				}
+			]
+		},
+		{
+			"id": "meat_and_poultry",
+			"category": "Meat & Poultry",
+			"items": [
+				{
+					"item": "Egg Whole(Boiled)",
+					"quantity": 70,
+					"carbohydrates": null,
+					"proteins": 9,
+					"fats": 7,
+					"energy": 100,
+					"category": "Meat & Poultry",
+					"group": "A",
+					"default": {
+						"quantity": 70,
+						"proteins": 9,
+						"fats": 7,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Egg White(Boiled)",
+					"quantity": 200,
+					"carbohydrates": null,
+					"proteins": 25,
+					"fats": 0.5,
+					"energy": 100,
+					"category": "Meat & Poultry",
+					"group": "A",
+					"default": {
+						"quantity": 200,
+						"proteins": 25,
+						"fats": 0.5,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Egg Yolk(Boiled)",
+					"quantity": 30,
+					"carbohydrates": null,
+					"proteins": 4,
+					"fats": 8,
+					"energy": 100,
+					"category": "Meat & Poultry",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"proteins": 4,
+						"fats": 8,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Chicken Leg(Skinless)",
+					"quantity": 45,
+					"carbohydrates": null,
+					"proteins": 9,
+					"fats": 6,
+					"energy": 100,
+					"category":"Meat & Poultry",
+					"group": "B",
+					"default": {
+						"quantity": 45,
+						"proteins": 9,
+						"fats": 6,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Chicken Tigh(Skinless)",
+					"quantity": 45,
+					"carbohydrates": null,
+					"proteins": 9,
+					"fats": 6,
+					"energy": 100,
+					"category":"Meat & Poultry",
+					"group": "B",
+					"default": {
+						"quantity": 45,
+						"proteins": 9,
+						"fats": 6,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Chicken Breast(Skinless)",
+					"quantity": 45,
+					"carbohydrates": null,
+					"proteins": 9,
+					"fats": 6,
+					"energy": 100,
+					"category":"Meat & Poultry",
+					"group": "B",
+					"default": {
+						"quantity": 45,
+						"proteins": 9,
+						"fats": 6,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Chicken Wings(Skinless)",
+					"quantity": 45,
+					"carbohydrates": null,
+					"proteins": 9,
+					"fats": 6,
+					"energy": 100,
+					"category":"Meat & Poultry",
+					"group": "B",
+					"default": {
+						"quantity": 45,
+						"proteins": 9,
+						"fats": 6,
+						"energy": 100
+					}
+				},
+		
+				{
+					"item": "Country Hen(Leg)",
+					"quantity": 55,
+					"carbohydrates": null,
+					"proteins": 10.5,
+					"fats": 6.5,
+					"energy": 100,
+					"category": "Meat & Poultry",
+					"group": "C",
+					"default": {
+						"quantity": 55,
+						"proteins": 10.5,
+						"fats": 6.5,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Country Hen(Thigh)",
+					"quantity": 55,
+					"carbohydrates": null,
+					"proteins": 10.5,
+					"fats": 6.5,
+					"energy": 100,
+					"category": "Meat & Poultry",
+					"group": "C",
+					"default": {
+						"quantity": 55,
+						"proteins": 10.5,
+						"fats": 6.5,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Country Hen(Breast)",
+					"quantity": 55,
+					"carbohydrates": null,
+					"proteins": 10.5,
+					"fats": 6.5,
+					"energy": 100,
+					"category": "Meat & Poultry",
+					"group": "C",
+					"default": {
+						"quantity": 55,
+						"proteins": 10.5,
+						"fats": 6.5,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Country Hen Wings with Skin",
+					"quantity": 55,
+					"carbohydrates": null,
+					"proteins": 10.5,
+					"fats": 6.5,
+					"energy": 100,
+					"category": "Meat & Poultry",
+					"group": "C",
+					"default": {
+						"quantity": 55,
+						"proteins": 10.5,
+						"fats": 6.5,
+						"energy": 100
+					}
+				},
+		
+				{
+					"item": "Goat Meat(Lean Shoulder)",
+					"quantity": 60,
+					"carbohydrates": null,
+					"proteins": 13,
+					"fats": 5,
+					"energy": 100,
+					"category": "Meat & Poultry",
+					"group": "D",
+					"default": {
+						"quantity": 60,
+						"proteins": 13,
+						"fats": 5,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Goat Meat(Chops)",
+					"quantity": 60,
+					"carbohydrates": null,
+					"proteins": 13,
+					"fats": 5,
+					"energy": 100,
+					"category": "Meat & Poultry",
+					"group": "D",
+					"default": {
+						"quantity": 60,
+						"proteins": 13,
+						"fats": 5,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Goat Meat(Legs)",
+					"quantity": 60,
+					"carbohydrates": null,
+					"proteins": 13,
+					"fats": 5,
+					"energy": 100,
+					"category": "Meat & Poultry",
+					"group": "D",
+					"default": {
+						"quantity": 60,
+						"proteins": 13,
+						"fats": 5,
+						"energy": 100
+					}
+				},
+		
+				{
+					"item": "Goat Organ Meat",
+					"quantity": 85,
+					"carbohydrates": null,
+					"proteins": 15,
+					"fats": 4,
+					"energy": 100,
+					"category": "Meat & Poultry",
+					"group": "E",
+					"default": {
+						"quantity": 85,
+						"proteins": 15,
+						"fats": 4,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Goat Brain",
+					"quantity": 85,
+					"carbohydrates": null,
+					"proteins": 15,
+					"fats": 4,
+					"energy": 100,
+					"category": "Meat & Poultry",
+					"group": "E",
+					"default": {
+						"quantity": 85,
+						"proteins": 15,
+						"fats": 4,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Goat Lungs",
+					"quantity": 85,
+					"carbohydrates": null,
+					"proteins": 15,
+					"fats": 4,
+					"energy": 100,
+					"category": "Meat & Poultry",
+					"group": "E",
+					"default": {
+						"quantity": 85,
+						"proteins": 15,
+						"fats": 4,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Goat Heart",
+					"quantity": 85,
+					"carbohydrates": null,
+					"proteins": 15,
+					"fats": 4,
+					"energy": 100,
+					"category": "Meat & Poultry",
+					"group": "E",
+					"default": {
+						"quantity": 85,
+						"proteins": 15,
+						"fats": 4,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Goat Liver",
+					"quantity": 85,
+					"carbohydrates": null,
+					"proteins": 15,
+					"fats": 4,
+					"energy": 100,
+					"category": "Meat & Poultry",
+					"group": "E",
+					"default": {
+						"quantity": 85,
+						"proteins": 15,
+						"fats": 4,
+						"energy": 100
+					}
+				}
+			]
+		},
+		{
+			"id": "seafood",
+			"category": "Seafood",
+			"items": [
+				{
+					"item": "Rohu",
+					"quantity": 125,
+					"carbohydrates": null,
+					"proteins": 21,
+					"fats": 1.3,
+					"energy": 100,
+					"category": "Seafood",
+					"group": "A",
+					"default": {
+						"quantity": 125,
+						"proteins": 21,
+						"fats": 1.3,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Prawns(Big)",
+					"quantity": 125,
+					"carbohydrates": null,
+					"proteins": 21,
+					"fats": 1.3,
+					"energy": 100,
+					"category": "Seafood",
+					"group": "A",
+					"default": {
+						"quantity": 125,
+						"proteins": 21,
+						"fats": 1.3,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Prawns(Small)",
+					"quantity": 125,
+					"carbohydrates": null,
+					"proteins": 21,
+					"fats": 1.3,
+					"energy": 100,
+					"category": "Seafood",
+					"group": "A",
+					"default": {
+						"quantity": 125,
+						"proteins": 21,
+						"fats": 1.3,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Tiger Prawns",
+					"quantity": 125,
+					"carbohydrates": null,
+					"proteins": 21,
+					"fats": 1.3,
+					"energy": 100,
+					"category": "Seafood",
+					"group": "A",
+					"default": {
+						"quantity": 125,
+						"proteins": 21,
+						"fats": 1.3,
+						"energy": 100
+					}
+				},
+		
+				{
+					"item": "Crab",
+					"quantity": 115,
+					"carbohydrates": null,
+					"proteins": 16.5,
+					"fats": 1.2,
+					"energy": 100,
+					"category": "Seafood",
+					"group": "B",
+					"default": {
+						"quantity": 115,
+						"proteins": 16.5,
+						"fats": 1.2,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Lobster(King Size)",
+					"quantity": 115,
+					"carbohydrates": null,
+					"proteins": 16.5,
+					"fats": 1.2,
+					"energy": 100,
+					"category": "Seafood",
+					"group": "B",
+					"default": {
+						"quantity": 115,
+						"proteins": 16.5,
+						"fats": 1.2,
+						"energy": 100
+					}
+				},
+		
+				{
+					"item": "Pomfret(White)",
+					"quantity": 80,
+					"carbohydrates": null,
+					"proteins": 19.02,
+					"fats": 5.12,
+					"energy": 513,
+					"category": "Seafood",
+					"group": "C",
+					"default": {
+						"quantity": 80,
+						"proteins": 19.02,
+						"fats": 5.12,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Pomfret(Black)",
+					"quantity": 80,
+					"carbohydrates": null,
+					"proteins": 18.91,
+					"fats": 4.83,
+					"energy": 515,
+					"category": "Seafood",
+					"group": "C",
+					"default": {
+						"quantity": 80,
+						"proteins": 18.91,
+						"fats": 4.83,
+						"energy": 515
+					}
+				},
+				{
+					"item": "Red Snapper",
+					"quantity": 80,
+					"carbohydrates": null,
+					"proteins": 22.79,
+					"fats": 1.34,
+					"energy": 437,
+					"category": "Seafood",
+					"group": "C",
+					"default": {
+						"quantity": 80,
+						"proteins": 22.79,
+						"fats": 1.34,
+						"energy": 437
+					}
+				},
+				{
+					"item": "Sardine",
+					"quantity": 80,
+					"carbohydrates": null,
+					"proteins": 17.91,
+					"fats": 8.99,
+					"energy": 637,
+					"category": "Seafood",
+					"group": "C",
+					"default": {
+						"quantity": 80,
+						"proteins": 17.91,
+						"fats": 8.99,
+						"energy": 637
+					}
+				},
+				{
+					"item": "Salmon",
+					"quantity": 80,
+					"carbohydrates": null,
+					"proteins": 20.97,
+					"fats": 9.86,
+					"energy": 721,
+					"category": "Seafood",
+					"group": "C",
+					"default": {
+						"quantity": 80,
+						"proteins": 20.97,
+						"fats": 9.86,
+						"energy": 721
+					}
+				},
+				{
+					"item": "Tuna",
+					"quantity": 80,
+					"carbohydrates": null,
+					"proteins": 24.50,
+					"fats": 1.44,
+					"energy": 470,
+					"category": "Seafood",
+					"group": "C",
+					"default": {
+						"quantity": 80,
+						"proteins": 24.50,
+						"fats": 1.44,
+						"energy": 470
+					}
+				}
+			]
+		}
+	]
+}
