@@ -99,8 +99,8 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 	}
 
 	return (
-		<div className="container pt-3" style={{maxWidth: '920px', margin: '0 auto'}}>
-			<div className="header-wrapper" style={{minWidth: '920px', margin: '0 auto'}}>
+		<div className="container pt-3" style={{maxWidth: '980px', margin: '0 auto'}}>
+			<div className="header-wrapper" style={{minWidth: '980px', margin: '0 auto'}}>
 				<div className="dropdown">
 					<button className="btn btn-primary dropdown-toggle px-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 						{categories[category]}
@@ -131,15 +131,15 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 				</div>
 			</div>
 			<div className={`${filteredData.length > 0 ? 'd-block' : 'd-none'} mt-3 table-wrapper`}>
-				<table className="table" style={{minWidth: '920px'}}>
+				<table className="table" style={{minWidth: '980px'}}>
 					<thead>
 						<tr>
 							<th className='text-left px-3 py-1'>Food Item</th>
-							<th className='text-center px-3 py-1'>Amount(g)</th>
-							<th className='text-center px-3 py-1'>Carbohydrates(g)</th>
-							<th className='text-center px-3 py-1'>Proteins(g)</th>
-							<th className='text-center px-3 py-1'>Fats(g)</th>
-							<th className='text-center px-3 py-1'>Energy(kcal)</th>
+							<th className='text-center px-3 py-1'> <span>Amount(g)</span> <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
+							<th className='text-center px-3 py-1'>Carbohydrates(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
+							<th className='text-center px-3 py-1'>Proteins(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
+							<th className='text-center px-3 py-1'>Fats(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
+							<th className='text-center px-3 py-1'>Energy(kcal) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -161,7 +161,7 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 			<div className={`${ !filteredData.length ? 'd-block' : 'd-none'} mt-3 table-wrapper`}>
 				{ allData.map(item => {
 					return (
-						<table key={item.category} className="table mb-5" style={{minWidth: '920px'}}>
+						<table key={item.category} className="table mb-5" style={{minWidth: '980px'}}>
 							<thead>
 								<tr>
 									<th className='text-left px-3 py-1'>Food Item</th>

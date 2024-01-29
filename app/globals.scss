@@ -36,6 +36,14 @@
   }
 }
 
+table {
+  thead tr th{
+    .exchange-count-text {
+      font-size: 12px !important;
+      margin-left: 1px;
+    }
+  }
+}
 @media (max-width: 993px) {
   .header-wrapper {
     min-width: 100% !important;
