@@ -1,0 +1,62 @@
+@import url('bootstrap/dist/css/bootstrap.css');
+
+.btn:disabled, .btn.disabled {
+  border: unset;
+  cursor: not-allowed;
+}
+.container {
+  position: relative;
+  .search-wrapper {
+    input:focus-visible {
+      outline: 1px solid #dee2e6 !important;
+    }
+  }
+}
+
+.header-wrapper {
+  display: grid !important;
+  grid: auto/repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  position: sticky;
+  top: 0px;
+  padding-block: 10px;
+  background-color: white;
+  z-index: 99;
+  .dropdown {
+    grid: 1/ span 1;
+  }
+  .search-wrapper {
+    grid-column: 1/-1;
+  }
+  .exchange-count-wrapper {
+    grid-column: 2/-1;
+    grid-row: 1;
+    justify-content: flex-end;
+    margin-right: 1px;
+  }
+}
+
+@media (max-width: 993px) {
+  .header-wrapper {
+    min-width: 100% !important;
+  }
+  .table-wrapper {
+    overflow-x: auto;
+    table {
+      font-size: 14px !important;
+      thead tr th:nth-of-type(1) {
+        position: sticky;
+        left: 0;
+        max-width: 188px;
+      }
+      tbody tr td:nth-of-type(1) {
+        position: sticky;
+        left: 0;
+        max-width: 188px;
+      }
+      tbody tr td:not(:nth-of-type(1)) {
+        border-left: 0.5px solid rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}

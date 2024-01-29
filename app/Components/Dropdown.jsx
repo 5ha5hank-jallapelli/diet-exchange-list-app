@@ -4,7 +4,7 @@ import { useState } from "react"
 import FilteredData from "./FilteredData";
 
 export default function Dropdown({props}) {
-	const [category, setCategory] = useState("none");
+	const [category, setCategory] = useState("all");
 	const [toggleDropdown, setToggleDropdown] = useState(false);
 	const [count, setCount] = useState(1)
 
@@ -30,7 +30,6 @@ export default function Dropdown({props}) {
 
 	return (
 		<div>
-			
 			<FilteredData 
 			data={props.data} 
 			exchangeCount={count} 
