@@ -4,6 +4,12 @@
   border: unset;
   cursor: not-allowed;
 }
+
+.btn {
+  &:active {
+    border: unset;
+  }
+}
 .container {
   position: relative;
   .search-wrapper {

@@ -1,18 +1,17 @@
 import { useState, useEffect } from "react"
 import Image from "next/image";
 
-export default function FilteredData({ data, exchangeCount, category, handleDropdownClick, onIncreaseCount, onDecreaseCount, showDropdownMenu, dropdownToggle }) {
+export default function FilteredData({ data, exchangeCount, category, handleDropdownClick, onIncreaseCount, onDecreaseCount, resetCategory }) {
 	const [filteredData, setFilteredData] = useState([]);
 	const [searchQuery, setSearchQuery] = useState('');
 	const [allData, setAllData] = useState([]);
 
 	useEffect(() => {
-		const allFoodItemsData = [];
+		const allItemsCollection = [];
 		data.map(item => {
-			allFoodItemsData.push(item);
+			allItemsCollection.push(item.items);
 		});
-
-		setAllData(allFoodItemsData);
+		setAllData(allItemsCollection);
 	}, [data])
 
 	const categories = {
@@ -52,23 +51,51 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 				energy: item.energy + item.default.energy }
 			});
 			setFilteredData(updatedData)
+		} else if (allData.length) { 
+			const uDATA = allData.map(item => {
+				return item.map(i => {
+					return {...i, 
+						quantity: i.quantity + i.default.quantity,
+						carbohydrates: i.carbohydrates + i.default.carbohydrates,
+						proteins: i.proteins + i.default.proteins,
+						fats: (i.fats + i.default.fats),
+						energy: i.energy + i.default.energy
+					 }
+				})
+				
+			});
+			setAllData(uDATA);
 		}
 		onIncreaseCount();
 	}
 	
 	function handleDecreaseCount() {
-		const updatedData = filteredData.map(item => {
-			return {...item, 
-				quantity: item.quantity - item.default.quantity,
-				carbohydrates: item.carbohydrates - item.default.carbohydrates,
-				proteins: item.proteins - item.default.proteins,
-				fats: item.fats - item.default.fats,
-				energy: item.energy - item.default.energy
-			}
-		})
-		
-		setFilteredData(updatedData)
-
+		if (filteredData.length) {
+			const updatedData = filteredData.map(item => {
+				return {...item, 
+					quantity: item.quantity - item.default.quantity,
+					carbohydrates: item.carbohydrates - item.default.carbohydrates,
+					proteins: item.proteins - item.default.proteins,
+					fats: item.fats - item.default.fats,
+					energy: item.energy - item.default.energy
+				}
+			});
+			setFilteredData(updatedData)
+		} else if (allData.length) { 
+			const uDATA = allData.map(item => {
+				return item.map(i => {
+					return {...i, 
+						quantity: i.quantity - i.default.quantity,
+						carbohydrates: i.carbohydrates - i.default.carbohydrates,
+						proteins: i.proteins - i.default.proteins,
+						fats: (i.fats - i.default.fats),
+						energy: i.energy - i.default.energy
+					 }
+				})
+				
+			});
+			setAllData(uDATA);
+		}
 		onDecreaseCount();
 	}
 
@@ -82,6 +109,7 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 			}, 300)
 		} else {
 			setFilteredData([]);
+			resetCategory('all');
 		}
 	}
 
@@ -120,13 +148,13 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 					<input type="text" placeholder="Search Food Item..." onChange={handleSearch} className=" border py-1 px-2 rounded w-100" id="search" name="search" />
 				</div>
 				<div className="d-flex align-items-center exchange-count-wrapper">
-					<span className="fw-medium">Exchange:</span>
-					<button className="btn" onClick={() => handleDecreaseCount()} disabled={exchangeCount == 1}>
-						<Image src={`icons/btn-minus.svg`} alt="decrese-exchange-btn" width={24} height={24} />
+					<Image src={'icons/illus-exchange-icon.svg'} alt="exchange-illustration" width={18} height={18} /> <span className="mx-2 d-block text-black-50">|</span>
+					<button className="btn btn-primary p-0 d-flex align-items-center justify-content-center" style={{width: '24px', height: '25px', fontSize: '19px'}} onClick={() => handleDecreaseCount()} disabled={exchangeCount == 1}>
+						-
 					</button>
-					<span className="d-inline-block fw-medium mx-1">{ String(exchangeCount).padStart(2, '0') }</span>	
-					<button className="btn" onClick={() => handleIncreaseCount()}>
-						<Image src={`icons/btn-plus.svg`} alt="increse-exchange-btn" width={24} height={24} />
+					<span className="d-inline-block fw-medium mx-2">{ String(exchangeCount).padStart(2, '0') }</span>	
+					<button className="btn btn-primary p-0 d-flex align-items-center justify-content-center" style={{width: '24px', height: '25px', fontSize: '19px'}} onClick={() => handleIncreaseCount()}>
+						+
 					</button>
 				</div>
 			</div>
@@ -159,29 +187,29 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 				</table>
 			</div>
 			<div className={`${ !filteredData.length ? 'd-block' : 'd-none'} mt-3 table-wrapper`}>
-				{ allData.map(item => {
+				{ allData.map((item, index) => {
 					return (
-						<table key={item.category} className="table mb-5" style={{minWidth: '980px'}}>
+						<table key={index} className="table mb-5" style={{minWidth: '980px'}}>
 							<thead>
 								<tr>
 									<th className='text-left px-3 py-1'>Food Item</th>
-									<th className='text-center px-3 py-1'>Amount(g)</th>
-									<th className='text-center px-3 py-1'>Carbohydrates(g)</th>
-									<th className='text-center px-3 py-1'>Proteins(g)</th>
-									<th className='text-center px-3 py-1'>Fats(g)</th>
-									<th className='text-center px-3 py-1'>Energy(kcal)</th>
+									<th className='text-center px-3 py-1'> <span>Amount(g)</span> <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
+									<th className='text-center px-3 py-1'>Carbohydrates(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
+									<th className='text-center px-3 py-1'>Proteins(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
+									<th className='text-center px-3 py-1'>Fats(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
+									<th className='text-center px-3 py-1'>Energy(kcal) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
 								</tr>
 							</thead>
 							<tbody>
-								{ item.items.map((item, index) => {
+								{ item.map((i, index) => {
 									return (
 										<tr key={`${item}_${index}`}>
-											<td className='text-left px-3 py-1'>{item.item}</td>
-											<td className='text-center px-3 py-1'>{(item.quantity).toFixed(2)}</td>
-											<td className='text-center px-3 py-1'>{item.carbohydrates ? (item.carbohydrates).toFixed(2) : '--' }</td>
-											<td className='text-center px-3 py-1'>{(item.proteins).toFixed(2)}</td>
-											<td className='text-center px-3 py-1'>{(item.fats).toFixed(2)}</td>
-											<td className='text-center px-3 py-1'>{(item.energy).toFixed(2)}</td>
+											<td className='text-left px-3 py-1'>{i.item}</td>
+											<td className='text-center px-3 py-1'>{(i.quantity).toFixed(2)}</td>
+											<td className='text-center px-3 py-1'>{i.carbohydrates ? (i.carbohydrates).toFixed(2) : '--' }</td>
+											<td className='text-center px-3 py-1'>{(i.proteins).toFixed(2)}</td>
+											<td className='text-center px-3 py-1'>{(i.fats).toFixed(2)}</td>
+											<td className='text-center px-3 py-1'>{(i.energy).toFixed(2)}</td>
 										</tr> 
 									)}) 
 								}
