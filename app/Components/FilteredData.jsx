@@ -5,6 +5,9 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 	const [filteredData, setFilteredData] = useState([]);
 	const [searchQuery, setSearchQuery] = useState('');
 	const [allData, setAllData] = useState([]);
+	const [dropdownOptions, setDropdownOptions] = useState({
+		all: 'All Items',
+	})
 
 	useEffect(() => {
 		const allItemsCollection = [];
@@ -12,15 +15,22 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 			allItemsCollection.push(item.items);
 		});
 		setAllData(allItemsCollection);
+		getDropdownOptionsData();
 	}, [data])
 
-	const categories = {
-		all: "All Items",
-		cereals: "Cereals",
-		pulses: "Pulses",
-		nuts_and_oilseeds: "Nuts & OilSeeds",
-		meat_and_poultry: "Meat and Poultry",
-		seafood: "Seafood"
+	function getDropdownOptionsData() {
+		const updatedOptions = {};
+		data.map(item => {
+			updatedOptions[item.category.toLowerCase().replaceAll(" ", "_")] = item.category;
+		});
+		updateDropdownOptions(updatedOptions);
+	}
+
+	function updateDropdownOptions(options) {
+		setDropdownOptions(prevState => ({
+			...prevState,
+			...options
+		}));
 	}
 
 	function filterData(category) {
@@ -128,16 +138,17 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 
 	return (
 		<div className="container pt-3" style={{maxWidth: '980px', margin: '0 auto'}}>
+			{ console.log( dropdownOptions ) }
 			<div className="header-wrapper" style={{minWidth: '980px', margin: '0 auto'}}>
 				<div className="dropdown">
 					<button className="btn btn-primary dropdown-toggle px-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-						{categories[category]}
+						{dropdownOptions[category]}
 					</button>
 					<ul className="dropdown-menu">
-						{ Object.keys(categories).map(key => {
+						{ Object.keys(dropdownOptions).map(key => {
 							return (
 							<li key={key} className="relative">
-								<a className="dropdown-item" onClick={() => filterData(`${key}`)} href="#">{categories[key]}</a>
+								<a className="dropdown-item" onClick={() => filterData(`${key}`)} href="#">{dropdownOptions[key]}</a>
 							</li>
 							)
 						})

@@ -548,7 +548,7 @@
 		},
 		{
 			"id": "meat_and_poultry",
-			"category": "Meat & Poultry",
+			"category": "Meat and Poultry",
 			"items": [
 				{
 					"item": "Egg Whole(Boiled)",
@@ -1055,6 +1055,665 @@
 						"proteins": 24.50,
 						"fats": 1.44,
 						"energy": 470
+					}
+				}
+			]
+		},
+		{
+			"id": "vegetables",
+			"category": "Vegetables",
+			"items": [
+				{
+					"item": "Ash Gourd",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Bitter Gourd Ridges",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Bottle Gourd Ridges",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Brinjal",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Capsicum Red",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Capsicum Yellow",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Capsicum Green",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Cabbage Green",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Cauliflower",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "French Beans",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Onion Stalk",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Pumpkin (Orange Round)",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Zucchini",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Snake Gourd",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Drumstick",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Tomato (Green)",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Tomato (Ripe)",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Cucumber",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Spinach",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Amaranth",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Nol Khol",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Lettuce",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Ladies Finger",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 1.5,
+					"fats": 0.3,
+					"energy": 20,
+					"category": "Vegetables",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 1.5,
+						"fats": 0.3,
+						"energy": 20
+					}
+				},
+				{
+					"item": "Onion (Big)",
+					"quantity": 100,
+					"carbohydrates": 7.5,
+					"proteins": 1.2,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Vegetables",
+					"group": "B",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 7.5,
+						"proteins": 1.2,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Onion (Small)",
+					"quantity": 100,
+					"carbohydrates": 7.5,
+					"proteins": 1.2,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Vegetables",
+					"group": "B",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 7.5,
+						"proteins": 1.2,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Carrot (Orange)",
+					"quantity": 100,
+					"carbohydrates": 7.5,
+					"proteins": 1.2,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Vegetables",
+					"group": "B",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 7.5,
+						"proteins": 1.2,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Carrot (Red)",
+					"quantity": 100,
+					"carbohydrates": 7.5,
+					"proteins": 1.2,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Vegetables",
+					"group": "B",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 7.5,
+						"proteins": 1.2,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Raddish (White Round)",
+					"quantity": 100,
+					"carbohydrates": 7.5,
+					"proteins": 1.2,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Vegetables",
+					"group": "B",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 7.5,
+						"proteins": 1.2,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Raddish (Red)",
+					"quantity": 100,
+					"carbohydrates": 7.5,
+					"proteins": 1.2,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Vegetables",
+					"group": "B",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 7.5,
+						"proteins": 1.2,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Brinjal",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 2.5,
+					"fats": 0.6,
+					"energy": 30,
+					"category": "Vegetables",
+					"group": "C",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 2.5,
+						"fats": 0.6,
+						"energy": 30
+					}
+				},
+				{
+					"item": "Field Beans (Tender Broad)",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 2.5,
+					"fats": 0.6,
+					"energy": 30,
+					"category": "Vegetables",
+					"group": "C",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 2.5,
+						"fats": 0.6,
+						"energy": 30
+					}
+				},
+				{
+					"item": "Fenugreek Leaves",
+					"quantity": 100,
+					"carbohydrates": 2.5,
+					"proteins": 2.5,
+					"fats": 0.6,
+					"energy": 30,
+					"category": "Vegetables",
+					"group": "C",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 2.5,
+						"proteins": 2.5,
+						"fats": 0.6,
+						"energy": 30
+					}
+				},
+
+				{
+					"item": "Sweet Potato (Brown)",
+					"quantity": 100,
+					"carbohydrates": 20,
+					"proteins": 1.5,
+					"fats": 0.2,
+					"energy": 90,
+					"category": "Vegetables",
+					"group": "D",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 20,
+						"proteins": 1.5,
+						"fats": 0.2,
+						"energy": 90
+					}
+				},
+				{
+					"item": "Sweet Potato (Pink)",
+					"quantity": 100,
+					"carbohydrates": 20,
+					"proteins": 1.5,
+					"fats": 0.2,
+					"energy": 90,
+					"category": "Vegetables",
+					"group": "D",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 20,
+						"proteins": 1.5,
+						"fats": 0.2,
+						"energy": 90
+					}
+				},
+				{
+					"item": "Yam (Regular)",
+					"quantity": 100,
+					"carbohydrates": 20,
+					"proteins": 1.5,
+					"fats": 0.2,
+					"energy": 90,
+					"category": "Vegetables",
+					"group": "D",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 20,
+						"proteins": 1.5,
+						"fats": 0.2,
+						"energy": 90
+					}
+				},
+				{
+					"item": "Potato (Brown Skin Big)",
+					"quantity": 100,
+					"carbohydrates": 20,
+					"proteins": 1.5,
+					"fats": 0.2,
+					"energy": 90,
+					"category": "Vegetables",
+					"group": "D",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 20,
+						"proteins": 1.5,
+						"fats": 0.2,
+						"energy": 90
+					}
+				}
+			]
+		},
+		{
+			"id": "mushrooms",
+			"category": "Mushrooms",
+			"items": [
+				{
+					"item": "Button Mushrooms",
+					"quantity": 100,
+					"carbohydrates": 5.5,
+					"proteins": 3.5,
+					"fats": 0.5,
+					"energy": 179,
+					"category": "Mushrooms",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 5.5,
+						"proteins": 3.5,
+						"fats": 0.5,
+						"energy": 179
+					}
+				},
+				{
+					"item": "Shitake Mushrooms",
+					"quantity": 100,
+					"carbohydrates": 5.5,
+					"proteins": 3.5,
+					"fats": 0.5,
+					"energy": 179,
+					"category": "Mushrooms",
+					"group": "A",
+					"default": {
+						"quantity": 100,
+						"carbohydrates": 5.5,
+						"proteins": 3.5,
+						"fats": 0.5,
+						"energy": 179
 					}
 				}
 			]
