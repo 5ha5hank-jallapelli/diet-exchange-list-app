@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 import Link from "next/link";
 
 export const metadata = {
-  title: "Exchange List",
+  title: "Diet Exchange List | TanAahara",
   description: "Exchange List Data",
 };
 
