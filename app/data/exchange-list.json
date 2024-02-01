@@ -974,7 +974,7 @@
 						"quantity": 80,
 						"proteins": 19.02,
 						"fats": 5.12,
-						"energy": 100
+						"energy": 513
 					}
 				},
 				{
@@ -1714,6 +1714,599 @@
 						"proteins": 3.5,
 						"fats": 0.5,
 						"energy": 179
+					}
+				}
+			]
+		},
+		{
+			"id": "fruits",
+			"category": "Fruits",
+			"items": [
+				{
+					"item": "Apricots (Dry)",
+					"quantity": 16,
+					"carbohydrates": 12,
+					"proteins": 0.4,
+					"fats": 0.0,
+					"energy": 50,
+					"category": "Fruits",
+					"group": "A",
+					"default": {
+						"quantity": 16,
+						"carbohydrates": 12,
+						"proteins": 0.4,
+						"fats": 0.0,
+						"energy": 50
+					}
+				},
+				{
+					"item": "Dates (Dry)",
+					"quantity": 16,
+					"carbohydrates": 12,
+					"proteins": 0.4,
+					"fats": 0.0,
+					"energy": 50,
+					"category": "Fruits",
+					"group": "A",
+					"default": {
+						"quantity": 16,
+						"carbohydrates": 12,
+						"proteins": 0.4,
+						"fats": 0.0,
+						"energy": 50
+					}
+				},
+				{
+					"item": "Raisins (Dry)",
+					"quantity": 16,
+					"carbohydrates": 12,
+					"proteins": 0.4,
+					"fats": 0.0,
+					"energy": 50,
+					"category": "Fruits",
+					"group": "A",
+					"default": {
+						"quantity": 16,
+						"carbohydrates": 12,
+						"proteins": 0.4,
+						"fats": 0.0,
+						"energy": 50
+					}
+				},
+				{
+					"item": "Banana",
+					"quantity": 50,
+					"carbohydrates": 25,
+					"proteins": 0.5,
+					"fats": 0.33,
+					"energy": 50,
+					"category": "Fruits",
+					"group": "B",
+					"default": {
+						"quantity":50,
+						"carbohydrates": 25,
+						"proteins": 0.5,
+						"fats": 0.33,
+						"energy": 50
+					}
+				},
+				{
+					"item": "Custard Apple",
+					"quantity": 50,
+					"carbohydrates": 25,
+					"proteins": 0.5,
+					"fats": 0.33,
+					"energy": 50,
+					"category": "Fruits",
+					"group": "B",
+					"default": {
+						"quantity":50,
+						"carbohydrates": 25,
+						"proteins": 0.5,
+						"fats": 0.33,
+						"energy": 50
+					}
+				},
+				{
+					"item": "Sapota",
+					"quantity": 50,
+					"carbohydrates": 25,
+					"proteins": 0.5,
+					"fats": 0.33,
+					"energy": 50,
+					"category": "Fruits",
+					"group": "B",
+					"default": {
+						"quantity":50,
+						"carbohydrates": 25,
+						"proteins": 0.5,
+						"fats": 0.33,
+						"energy": 50
+					}
+				},
+				{
+					"item": "Dates (Fresh)",
+					"quantity": 50,
+					"carbohydrates": 25,
+					"proteins": 0.5,
+					"fats": 0.33,
+					"energy": 50,
+					"category": "Fruits",
+					"group": "B",
+					"default": {
+						"quantity":50,
+						"carbohydrates": 25,
+						"proteins": 0.5,
+						"fats": 0.33,
+						"energy": 50
+					}
+				},
+				{
+					"item": "Mango",
+					"quantity": 65,
+					"carbohydrates": 7,
+					"proteins": 0.4,
+					"fats": 0.2,
+					"energy": 40,
+					"category": "Fruits",
+					"group": "C",
+					"default": {
+						"quantity":65,
+						"carbohydrates": 7,
+						"proteins": 0.4,
+						"fats": 0.2,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Jackfruit",
+					"quantity": 65,
+					"carbohydrates": 7,
+					"proteins": 0.4,
+					"fats": 0.2,
+					"energy": 40,
+					"category": "Fruits",
+					"group": "C",
+					"default": {
+						"quantity":65,
+						"carbohydrates": 7,
+						"proteins": 0.4,
+						"fats": 0.2,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Pomegranate",
+					"quantity": 60,
+					"carbohydrates": 7,
+					"proteins": 0.5,
+					"fats": 0.1,
+					"energy": 30,
+					"category": "Fruits",
+					"group": "D",
+					"default": {
+						"quantity":60,
+						"carbohydrates": 7,
+						"proteins": 0.5,
+						"fats": 0.1,
+						"energy": 30
+					}
+				},
+				{
+					"item": "Cherry",
+					"quantity": 60,
+					"carbohydrates": 7,
+					"proteins": 0.5,
+					"fats": 0.1,
+					"energy": 30,
+					"category": "Fruits",
+					"group": "D",
+					"default": {
+						"quantity":60,
+						"carbohydrates": 7,
+						"proteins": 0.5,
+						"fats": 0.1,
+						"energy": 30
+					}
+				},
+				{
+					"item": "Litchi",
+					"quantity": 60,
+					"carbohydrates": 7,
+					"proteins": 0.5,
+					"fats": 0.1,
+					"energy": 30,
+					"category": "Fruits",
+					"group": "D",
+					"default": {
+						"quantity":60,
+						"carbohydrates": 7,
+						"proteins": 0.5,
+						"fats": 0.1,
+						"energy": 30
+					}
+				},
+				{
+					"item": "Apple",
+					"quantity": 90,
+					"carbohydrates": 8,
+					"proteins": 0.5,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Fruits",
+					"group": "E",
+					"default": {
+						"quantity":90,
+						"carbohydrates": 8,
+						"proteins": 0.5,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Guava",
+					"quantity": 90,
+					"carbohydrates": 8,
+					"proteins": 0.5,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Fruits",
+					"group": "E",
+					"default": {
+						"quantity":90,
+						"carbohydrates": 8,
+						"proteins": 0.5,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Sweet Lime",
+					"quantity": 90,
+					"carbohydrates": 8,
+					"proteins": 0.5,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Fruits",
+					"group": "E",
+					"default": {
+						"quantity":90,
+						"carbohydrates": 8,
+						"proteins": 0.5,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Orange",
+					"quantity": 90,
+					"carbohydrates": 8,
+					"proteins": 0.5,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Fruits",
+					"group": "E",
+					"default": {
+						"quantity":90,
+						"carbohydrates": 8,
+						"proteins": 0.5,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Peach",
+					"quantity": 90,
+					"carbohydrates": 8,
+					"proteins": 0.5,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Fruits",
+					"group": "E",
+					"default": {
+						"quantity":90,
+						"carbohydrates": 8,
+						"proteins": 0.5,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Pear",
+					"quantity": 90,
+					"carbohydrates": 8,
+					"proteins": 0.5,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Fruits",
+					"group": "E",
+					"default": {
+						"quantity":90,
+						"carbohydrates": 8,
+						"proteins": 0.5,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Pineapple",
+					"quantity": 90,
+					"carbohydrates": 8,
+					"proteins": 0.5,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Fruits",
+					"group": "E",
+					"default": {
+						"quantity":90,
+						"carbohydrates": 8,
+						"proteins": 0.5,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Plum",
+					"quantity": 90,
+					"carbohydrates": 8,
+					"proteins": 0.5,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Fruits",
+					"group": "E",
+					"default": {
+						"quantity":90,
+						"carbohydrates": 8,
+						"proteins": 0.5,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Strawberry",
+					"quantity": 90,
+					"carbohydrates": 8,
+					"proteins": 0.5,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Fruits",
+					"group": "E",
+					"default": {
+						"quantity":90,
+						"carbohydrates": 8,
+						"proteins": 0.5,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Papaya",
+					"quantity": 90,
+					"carbohydrates": 8,
+					"proteins": 0.5,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Fruits",
+					"group": "E",
+					"default": {
+						"quantity":90,
+						"carbohydrates": 8,
+						"proteins": 0.5,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Figs",
+					"quantity": 90,
+					"carbohydrates": 8,
+					"proteins": 0.5,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Fruits",
+					"group": "E",
+					"default": {
+						"quantity":90,
+						"carbohydrates": 8,
+						"proteins": 0.5,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Grapes",
+					"quantity": 90,
+					"carbohydrates": 8,
+					"proteins": 0.5,
+					"fats": 0.3,
+					"energy": 40,
+					"category": "Fruits",
+					"group": "E",
+					"default": {
+						"quantity":90,
+						"carbohydrates": 8,
+						"proteins": 0.5,
+						"fats": 0.3,
+						"energy": 40
+					}
+				},
+				{
+					"item": "Muskmelon",
+					"quantity": 300,
+					"carbohydrates": 12.5,
+					"proteins": 1.5,
+					"fats": 0.7,
+					"energy": 60,
+					"category": "Fruits",
+					"group": "F",
+					"default": {
+						"quantity":300,
+						"carbohydrates": 12.5,
+						"proteins": 1.5,
+						"fats": 0.7,
+						"energy": 60
+					}
+				},
+				{
+					"item": "Watermelon",
+					"quantity": 300,
+					"carbohydrates": 12.5,
+					"proteins": 1.5,
+					"fats": 0.7,
+					"energy": 60,
+					"category": "Fruits",
+					"group": "F",
+					"default": {
+						"quantity":300,
+						"carbohydrates": 12.5,
+						"proteins": 1.5,
+						"fats": 0.7,
+						"energy": 60
+					}
+				}
+			]
+		},
+		{
+			"id": "milk_products",
+			"category": "Milk Products",
+			"items": [
+				{
+					"item": "Milk (Cow)",
+					"quantity": 150,
+					"quantity_unit": "(ml)",
+					"carbohydrates": 7,
+					"proteins": 5,
+					"fats": 6.5,
+					"energy": 100,
+					"category": "Milk and Milk Products",
+					"group": "A",
+					"default": {
+						"quantity": 150,
+						"carbohydrates": 7,
+						"proteins": 5,
+						"fats": 6.5,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Milk (Buffalo)",
+					"quantity": 95,
+					"quantity_unit": "(ml)",
+					"carbohydrates": 7.5,
+					"proteins": 3.5,
+					"fats": 6,
+					"energy": 100,
+					"category": "Milk and Milk Products",
+					"group": "A",
+					"default": {
+						"quantity": 95,
+						"carbohydrates": 7.5,
+						"proteins": 3.5,
+						"fats": 6,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Paneer",
+					"quantity": 40,
+					"carbohydrates": 5,
+					"proteins": 7.5,
+					"fats": 6,
+					"energy": 100,
+					"category": "Milk and Milk Products",
+					"group": "A",
+					"default": {
+						"quantity": 40,
+						"carbohydrates": 5,
+						"proteins": 7.5,
+						"fats": 6,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Khoa",
+					"quantity": 30,
+					"carbohydrates": 5,
+					"proteins": 5,
+					"fats": 6,
+					"energy": 100,
+					"category": "Milk and Milk Products",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 5,
+						"proteins": 5,
+						"fats": 6,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Cheese",
+					"quantity": 30,
+					"carbohydrates": 2,
+					"proteins": 7,
+					"fats": 7,
+					"energy": 100,
+					"category": "Milk and Milk Products",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 2,
+						"proteins": 7,
+						"fats": 7,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Skim Milk Powder",
+					"quantity": 30,
+					"carbohydrates": 14,
+					"proteins": 10.5,
+					"fats": 0,
+					"energy": 100,
+					"category": "Milk and Milk Products",
+					"group": "A",
+					"default": {
+						"quantity": 30,
+						"carbohydrates": 14,
+						"proteins": 10.5,
+						"fats": 0,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Whole Milk Powder",
+					"quantity": 20,
+					"carbohydrates": 7.5,
+					"proteins": 5,
+					"fats": 5.5,
+					"energy": 100,
+					"category": "Milk and Milk Products",
+					"group": "A",
+					"default": {
+						"quantity": 20,
+						"carbohydrates": 7.5,
+						"proteins": 5,
+						"fats": 5.5,
+						"energy": 100
+					}
+				},
+				{
+					"item": "Skim Milk",
+					"quantity": 250,
+					"quantity_unit": "(ml)",
+					"carbohydrates": 16,
+					"proteins": 8.5,
+					"fats": 0.3,
+					"energy": 100,
+					"category": "Milk and Milk Products",
+					"group": "A",
+					"default": {
+						"quantity": 250,
+						"carbohydrates": 16,
+						"proteins": 8.5,
+						"fats": 0.3,
+						"energy": 100
 					}
 				}
 			]

@@ -9,6 +9,8 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 		all: 'All Items',
 	})
 
+	const tableHeaders = ['Amount', 'Carbohydrates', 'Proteins', 'Fats', 'Energy'];
+
 	useEffect(() => {
 		const allItemsCollection = [];
 		data.map(item => {
@@ -138,7 +140,6 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 
 	return (
 		<div className="container pt-3" style={{maxWidth: '980px', margin: '0 auto'}}>
-			{ console.log( dropdownOptions ) }
 			<div className="header-wrapper" style={{minWidth: '980px', margin: '0 auto'}}>
 				<div className="dropdown">
 					<button className="btn btn-primary dropdown-toggle px-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -173,12 +174,12 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 				<table className="table" style={{minWidth: '980px'}}>
 					<thead>
 						<tr>
-							<th className='text-left px-3 py-1'>Food Item</th>
-							<th className='text-center px-3 py-1'> <span>Amount(g)</span> <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
-							<th className='text-center px-3 py-1'>Carbohydrates(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
-							<th className='text-center px-3 py-1'>Proteins(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
-							<th className='text-center px-3 py-1'>Fats(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
-							<th className='text-center px-3 py-1'>Energy(kcal) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
+						<th className='text-left px-3 py-1'>Food Item</th>
+						<th className='text-center px-3 py-1'> <span>Amount{category !== 'milk_and_milk_products' ? '(g)' : ''}</span> <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
+						<th className='text-center px-3 py-1'>Carbohydrates(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
+						<th className='text-center px-3 py-1'>Proteins(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
+						<th className='text-center px-3 py-1'>Fats(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
+						<th className='text-center px-3 py-1'>Energy(kcal) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -186,7 +187,7 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 							return (
 								<tr key={`${item}_${index}`}>
 									<td className='text-left px-3 py-1'>{item.item}</td>
-									<td className='text-center px-3 py-1'>{(item.quantity).toFixed(2)}</td>
+									<td className='text-center px-3 py-1'>{(item.quantity).toFixed(2)}{item.quantity_unit ? item.quantity_unit : ''}</td>
 									<td className='text-center px-3 py-1'>{item.carbohydrates ? (item.carbohydrates).toFixed(2) : '--' }</td>
 									<td className='text-center px-3 py-1'>{(item.proteins).toFixed(2)}</td>
 									<td className='text-center px-3 py-1'>{(item.fats).toFixed(2)}</td>
@@ -216,7 +217,7 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 									return (
 										<tr key={`${item}_${index}`}>
 											<td className='text-left px-3 py-1'>{i.item}</td>
-											<td className='text-center px-3 py-1'>{(i.quantity).toFixed(2)}</td>
+											<td className='text-center px-3 py-1'>{(i.quantity).toFixed(2)}{i.quantity_unit ? i.quantity_unit : ''}</td>
 											<td className='text-center px-3 py-1'>{i.carbohydrates ? (i.carbohydrates).toFixed(2) : '--' }</td>
 											<td className='text-center px-3 py-1'>{(i.proteins).toFixed(2)}</td>
 											<td className='text-center px-3 py-1'>{(i.fats).toFixed(2)}</td>
