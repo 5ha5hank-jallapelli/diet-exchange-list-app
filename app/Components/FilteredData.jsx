@@ -241,9 +241,9 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 									<td className='text-center px-3 py-1'>
 										<input className="text-center border-0" type="text" name="filtered-quantity" id="" defaultValue={item.quantity} onKeyUp={() => handleItemUpdate(item)} />
 									</td>
-									<td className='text-center px-3 py-1'>{item.carbohydrates ? (item.carbohydrates).toFixed(1) : '--' }</td>
-									<td className='text-center px-3 py-1'>{(item.proteins).toFixed(1)}</td>
-									<td className='text-center px-3 py-1'>{(item.fats).toFixed(1)}</td>
+									<td className='text-center px-3 py-1'>{item.carbohydrates ? (item.carbohydrates).toFixed(2) : '--' }</td>
+									<td className='text-center px-3 py-1'>{(item.proteins).toFixed(2)}</td>
+									<td className='text-center px-3 py-1'>{(item.fats).toFixed(2)}</td>
 									<td className='text-center px-3 py-1'>{Math.round(item.energy)}</td>
 								</tr> 
 							)}) 
@@ -273,9 +273,9 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 											<td className='text-center px-3 py-1'>
 												<input className="text-center border-0" type="text" name="quantity" id="" defaultValue={i.quantity} onKeyUp={() => handleItemUpdate(i)} />
 											</td>
-											<td className='text-center px-3 py-1'>{i.carbohydrates ? (i.carbohydrates).toFixed(1) : '--' }</td>
-											<td className='text-center px-3 py-1'>{(i.proteins).toFixed(1)}</td>
-											<td className='text-center px-3 py-1'>{(i.fats).toFixed(1)}</td>
+											<td className='text-center px-3 py-1'>{i.carbohydrates ? (i.carbohydrates).toFixed(2) : '--' }</td>
+											<td className='text-center px-3 py-1'>{(i.proteins).toFixed(2)}</td>
+											<td className='text-center px-3 py-1'>{(i.fats).toFixed(2)}</td>
 											<td className='text-center px-3 py-1'>{ Math.round(i.energy)}</td>
 										</tr> 
 									)}) 
