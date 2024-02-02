@@ -49,6 +49,14 @@ table {
       margin-left: 1px;
     }
   }
+  tbody tr td {
+    input {
+      &:focus-within {
+        border: none;
+        outline: none;
+      }
+    }
+  }
 }
 @media (max-width: 993px) {
   .header-wrapper {

@@ -39,6 +39,8 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 		if (category === 'all') {
 			setFilteredData([]);
 		} else {
+			setAllData([]);
+
 			data.forEach(item => {
 				if (item.id === category && category !== 'all') {
 					setFilteredData((oldData) => {
@@ -155,6 +157,7 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 					if (i.id === itemId) {
 						const standardValue = updatedQuantity/i.default.quantity;
 						return {...i,
+							quantity: updatedQuantity,
 							carbohydrates: i.default.carbohydrates * standardValue,
 							proteins: i.default.proteins * standardValue,
 							fats: i.default.fats * standardValue,
@@ -166,6 +169,23 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 				})
 			});
 			setAllData(updateItem);
+		} else if (filteredData.length) {
+			const updatedItems = filteredData.map(item => {
+				if (item.id === itemId) {
+					const standardValue = updatedQuantity/item.default.quantity;
+					return {...item,
+						quantity: updatedQuantity,
+						carbohydrates: item.default.carbohydrates * standardValue,
+						proteins: item.default.proteins * standardValue,
+						fats: item.default.fats * standardValue,
+						energy: item.default.energy * standardValue
+					}
+				} else {
+					return { ...item }
+				}
+				
+			});
+			setFilteredData(updatedItems)
 		}
 	}
 
@@ -190,7 +210,7 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 				<div className="d-flex flex-grow-1 search-wrapper">
 					<input type="text" placeholder="Search Food Item..." onChange={handleSearch} className=" border py-1 px-2 rounded w-100" id="search" name="search" />
 				</div>
-				<div className="d-flex align-items-center exchange-count-wrapper">
+				<div className="d-flex align-items-center exchange-count-wrapper d-none">
 					<Image src={'icons/illus-exchange-icon.svg'} alt="exchange-illustration" width={18} height={18} /> <span className="mx-2 d-block text-black-50">|</span>
 					<button className="btn btn-primary p-0 d-flex align-items-center justify-content-center" style={{width: '24px', height: '25px', fontSize: '19px'}} onClick={() => handleDecreaseCount()} disabled={exchangeCount == 1}>
 						-
@@ -218,11 +238,13 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 							return (
 								<tr key={`${item}_${index}`}>
 									<td className='text-left px-3 py-1'>{item.item}</td>
-									<td className='text-center px-3 py-1'>{(item.quantity).toFixed(2)}{item.quantity_unit ? item.quantity_unit : ''}</td>
-									<td className='text-center px-3 py-1'>{item.carbohydrates ? (item.carbohydrates).toFixed(2) : '--' }</td>
-									<td className='text-center px-3 py-1'>{(item.proteins).toFixed(2)}</td>
-									<td className='text-center px-3 py-1'>{(item.fats).toFixed(2)}</td>
-									<td className='text-center px-3 py-1'>{(item.energy).toFixed(2)}</td>
+									<td className='text-center px-3 py-1'>
+										<input className="text-center border-0" type="text" name="filtered-quantity" id="" defaultValue={item.quantity} onKeyUp={() => handleItemUpdate(item)} />
+									</td>
+									<td className='text-center px-3 py-1'>{item.carbohydrates ? (item.carbohydrates).toFixed(1) : '--' }</td>
+									<td className='text-center px-3 py-1'>{(item.proteins).toFixed(1)}</td>
+									<td className='text-center px-3 py-1'>{(item.fats).toFixed(1)}</td>
+									<td className='text-center px-3 py-1'>{Math.round(item.energy)}</td>
 								</tr> 
 							)}) 
 						}
@@ -249,12 +271,12 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 										<tr key={`${item}_${index}`}>
 											<td className='text-left px-3 py-1'>{i.item}</td>
 											<td className='text-center px-3 py-1'>
-												<input type="text" name="quantity" id="" defaultValue={i.quantity} onKeyUp={() => handleItemUpdate(i)} />
+												<input className="text-center border-0" type="text" name="quantity" id="" defaultValue={i.quantity} onKeyUp={() => handleItemUpdate(i)} />
 											</td>
-											<td className='text-center px-3 py-1'>{i.carbohydrates ? (i.carbohydrates).toFixed(2) : '--' }</td>
-											<td className='text-center px-3 py-1'>{(i.proteins).toFixed(2)}</td>
-											<td className='text-center px-3 py-1'>{(i.fats).toFixed(2)}</td>
-											<td className='text-center px-3 py-1'>{(i.energy).toFixed(2)}</td>
+											<td className='text-center px-3 py-1'>{i.carbohydrates ? (i.carbohydrates).toFixed(1) : '--' }</td>
+											<td className='text-center px-3 py-1'>{(i.proteins).toFixed(1)}</td>
+											<td className='text-center px-3 py-1'>{(i.fats).toFixed(1)}</td>
+											<td className='text-center px-3 py-1'>{ Math.round(i.energy)}</td>
 										</tr> 
 									)}) 
 								}
