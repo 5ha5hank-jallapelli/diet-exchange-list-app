@@ -5,6 +5,7 @@
 			"category": "Cereals",
 			"items": [
 				{
+					"id": "ragi",
 					"item": "Ragi",
 					"quantity": 30,
 					"carbohydrates": 22.5,
@@ -22,6 +23,7 @@
 					}
 				},
 				{
+					"id": "rice-rm",
 					"item": "Rice (Raw Milled)",
 					"quantity": 30,
 					"carbohydrates": 22.5,
@@ -39,6 +41,7 @@
 					}
 				},
 				{
+					"id": "rice-pb",
 					"item": "Rice (Parboiled)",
 					"quantity": 30,
 					"carbohydrates": 22.5,
@@ -56,6 +59,7 @@
 					}
 				},
 				{
+					"id": "puffed-rice",
 					"item": "Puffed Rice",
 					"quantity": 30,
 					"carbohydrates": 22.5,
@@ -73,6 +77,7 @@
 					}
 				},
 				{
+					"id": "rice-flakes",
 					"item": "Rice Flakes",
 					"quantity": 30,
 					"carbohydrates": 22.5,

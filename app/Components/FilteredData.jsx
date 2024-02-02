@@ -138,6 +138,37 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 		return tempData;
 	}
 
+	function handleItemUpdate(item) {
+		if (event.key === 'Backspace') {
+			return
+		}
+		const updatedQuantity = Number(event.target.value);
+		const itemId = item.id;
+		
+		setTimeout(updateItem(itemId, updatedQuantity), 200);
+	}
+
+	function updateItem(itemId, updatedQuantity) {
+		if (allData.length) {
+			const updateItem = allData.map(item => {
+				return item.map(i => {
+					if (i.id === itemId) {
+						const standardValue = updatedQuantity/i.default.quantity;
+						return {...i,
+							carbohydrates: i.default.carbohydrates * standardValue,
+							proteins: i.default.proteins * standardValue,
+							fats: i.default.fats * standardValue,
+							energy: i.default.energy * standardValue
+						}
+					} else {
+						return { ...i }
+					}
+				})
+			});
+			setAllData(updateItem);
+		}
+	}
+
 	return (
 		<div className="container pt-3" style={{maxWidth: '980px', margin: '0 auto'}}>
 			<div className="header-wrapper" style={{minWidth: '980px', margin: '0 auto'}}>
@@ -217,7 +248,9 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 									return (
 										<tr key={`${item}_${index}`}>
 											<td className='text-left px-3 py-1'>{i.item}</td>
-											<td className='text-center px-3 py-1'>{(i.quantity).toFixed(2)}{i.quantity_unit ? i.quantity_unit : ''}</td>
+											<td className='text-center px-3 py-1'>
+												<input type="text" name="quantity" id="" defaultValue={i.quantity} onKeyUp={() => handleItemUpdate(i)} />
+											</td>
 											<td className='text-center px-3 py-1'>{i.carbohydrates ? (i.carbohydrates).toFixed(2) : '--' }</td>
 											<td className='text-center px-3 py-1'>{(i.proteins).toFixed(2)}</td>
 											<td className='text-center px-3 py-1'>{(i.fats).toFixed(2)}</td>
