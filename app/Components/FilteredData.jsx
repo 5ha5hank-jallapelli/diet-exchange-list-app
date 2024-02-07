@@ -50,14 +50,14 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 				}
 			});
 		}
-		
+
 		handleDropdownClick(category);
 	}
 
 	function handleIncreaseCount() {
 		if (filteredData.length) {
 			const updatedData = filteredData.map(item => {
-			return {...item, 
+			return {...item,
 				quantity: item.quantity + item.default.quantity,
 				carbohydrates: item.carbohydrates + item.default.carbohydrates,
 				proteins: item.proteins + item.default.proteins,
@@ -65,10 +65,10 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 				energy: item.energy + item.default.energy }
 			});
 			setFilteredData(updatedData)
-		} else if (allData.length) { 
+		} else if (allData.length) {
 			const uDATA = allData.map(item => {
 				return item.map(i => {
-					return {...i, 
+					return {...i,
 						quantity: i.quantity + i.default.quantity,
 						carbohydrates: i.carbohydrates + i.default.carbohydrates,
 						proteins: i.proteins + i.default.proteins,
@@ -76,17 +76,17 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 						energy: i.energy + i.default.energy
 					 }
 				})
-				
+
 			});
 			setAllData(uDATA);
 		}
 		onIncreaseCount();
 	}
-	
+
 	function handleDecreaseCount() {
 		if (filteredData.length) {
 			const updatedData = filteredData.map(item => {
-				return {...item, 
+				return {...item,
 					quantity: item.quantity - item.default.quantity,
 					carbohydrates: item.carbohydrates - item.default.carbohydrates,
 					proteins: item.proteins - item.default.proteins,
@@ -95,10 +95,10 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 				}
 			});
 			setFilteredData(updatedData)
-		} else if (allData.length) { 
+		} else if (allData.length) {
 			const uDATA = allData.map(item => {
 				return item.map(i => {
-					return {...i, 
+					return {...i,
 						quantity: i.quantity - i.default.quantity,
 						carbohydrates: i.carbohydrates - i.default.carbohydrates,
 						proteins: i.proteins - i.default.proteins,
@@ -106,7 +106,7 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 						energy: i.energy - i.default.energy
 					 }
 				})
-				
+
 			});
 			setAllData(uDATA);
 		}
@@ -116,7 +116,7 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 	function handleSearch(event) {
 		const inputValue = event.target.value;
 		setSearchQuery(inputValue);
-		
+
 		if (inputValue.length > 2) {
 			setTimeout(() => {
 				setFilteredData(searchedData(searchQuery));
@@ -146,7 +146,7 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 		}
 		const updatedQuantity = Number(event.target.value);
 		const itemId = item.id;
-		
+
 		setTimeout(updateItem(itemId, updatedQuantity), 200);
 	}
 
@@ -183,7 +183,7 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 				} else {
 					return { ...item }
 				}
-				
+
 			});
 			setFilteredData(updatedItems)
 		}
@@ -215,7 +215,7 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 					<button className="btn btn-primary p-0 d-flex align-items-center justify-content-center" style={{width: '24px', height: '25px', fontSize: '19px'}} onClick={() => handleDecreaseCount()} disabled={exchangeCount == 1}>
 						-
 					</button>
-					<span className="d-inline-block fw-medium mx-2">{ String(exchangeCount).padStart(2, '0') }</span>	
+					<span className="d-inline-block fw-medium mx-2">{ String(exchangeCount).padStart(2, '0') }</span>
 					<button className="btn btn-primary p-0 d-flex align-items-center justify-content-center" style={{width: '24px', height: '25px', fontSize: '19px'}} onClick={() => handleIncreaseCount()}>
 						+
 					</button>
@@ -226,11 +226,11 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 					<thead>
 						<tr>
 						<th className='text-left px-3 py-1'>Food Item</th>
-						<th className='text-center px-3 py-1'> <span>Amount{category !== 'milk_and_milk_products' ? '(g)' : ''}</span> <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
-						<th className='text-center px-3 py-1'>Carbohydrates(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
-						<th className='text-center px-3 py-1'>Proteins(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
-						<th className='text-center px-3 py-1'>Fats(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
-						<th className='text-center px-3 py-1'>Energy(kcal) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
+						<th className='text-center px-3 py-1'> <span>Amount{category !== 'milk_and_milk_products' ? '(g)' : ''}</span></th>
+						<th className='text-center px-3 py-1'>Carbohydrates(g)</th>
+						<th className='text-center px-3 py-1'>Proteins(g)</th>
+						<th className='text-center px-3 py-1'>Fats(g)</th>
+						<th className='text-center px-3 py-1'>Energy(kcal)</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -239,14 +239,14 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 								<tr key={`${item}_${index}`}>
 									<td className='text-left px-3 py-1'>{item.item}</td>
 									<td className='text-center px-3 py-1'>
-										<input className="text-center border-0" type="text" name="filtered-quantity" id="" defaultValue={item.quantity} onKeyUp={() => handleItemUpdate(item)} />
+										<input className="text-center border-0" type="text" name="filtered-quantity" style={{maxWidth: '80px'}} defaultValue={item.quantity} onKeyUp={() => handleItemUpdate(item)} />
 									</td>
 									<td className='text-center px-3 py-1'>{item.carbohydrates ? (item.carbohydrates).toFixed(2) : '--' }</td>
 									<td className='text-center px-3 py-1'>{(item.proteins).toFixed(2)}</td>
 									<td className='text-center px-3 py-1'>{(item.fats).toFixed(2)}</td>
 									<td className='text-center px-3 py-1'>{Math.round(item.energy)}</td>
-								</tr> 
-							)}) 
+								</tr>
+							)})
 						}
 					</tbody>
 				</table>
@@ -258,11 +258,11 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 							<thead>
 								<tr>
 									<th className='text-left px-3 py-1'>Food Item</th>
-									<th className='text-center px-3 py-1'> <span>Amount(g)</span> <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
-									<th className='text-center px-3 py-1'>Carbohydrates(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
-									<th className='text-center px-3 py-1'>Proteins(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
-									<th className='text-center px-3 py-1'>Fats(g) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
-									<th className='text-center px-3 py-1'>Energy(kcal) <span className="text-secondary exchange-count-text fs-6 fw-normal">{`${exchangeCount > 1 ? "["+exchangeCount+"x]" : ''}`}</span></th>
+									<th className='text-center px-3 py-1'> <span>Amount(g)</span></th>
+									<th className='text-center px-3 py-1'>Carbohydrates(g)</th>
+									<th className='text-center px-3 py-1'>Proteins(g)</th>
+									<th className='text-center px-3 py-1'>Fats(g)</th>
+									<th className='text-center px-3 py-1'>Energy(kcal)</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -271,14 +271,14 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 										<tr key={`${item}_${index}`}>
 											<td className='text-left px-3 py-1'>{i.item}</td>
 											<td className='text-center px-3 py-1'>
-												<input className="text-center border-0" type="text" name="quantity" id="" defaultValue={i.quantity} onKeyUp={() => handleItemUpdate(i)} />
+												<input className="text-center border-0" type="text" name="quantity" id="" defaultValue={i.quantity} style={{maxWidth: '80px'}} onKeyUp={() => handleItemUpdate(i)} />
 											</td>
 											<td className='text-center px-3 py-1'>{i.carbohydrates ? (i.carbohydrates).toFixed(2) : '--' }</td>
 											<td className='text-center px-3 py-1'>{(i.proteins).toFixed(2)}</td>
 											<td className='text-center px-3 py-1'>{(i.fats).toFixed(2)}</td>
 											<td className='text-center px-3 py-1'>{ Math.round(i.energy)}</td>
-										</tr> 
-									)}) 
+										</tr>
+									)})
 								}
 							</tbody>
 						</table>
