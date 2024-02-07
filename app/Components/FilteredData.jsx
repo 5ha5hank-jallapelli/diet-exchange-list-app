@@ -39,8 +39,6 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 		if (category === 'all') {
 			setFilteredData([]);
 		} else {
-			setAllData([]);
-
 			data.forEach(item => {
 				if (item.id === category && category !== 'all') {
 					setFilteredData((oldData) => {
@@ -74,7 +72,7 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 						proteins: i.proteins + i.default.proteins,
 						fats: (i.fats + i.default.fats),
 						energy: i.energy + i.default.energy
-					 }
+					}
 				})
 
 			});
