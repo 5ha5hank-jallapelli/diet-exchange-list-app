@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react"
 import Image from "next/image";
+import { toast, Bounce } from 'react-toastify';
 
 export default function FilteredData({ data, exchangeCount, category, handleDropdownClick, onIncreaseCount, onDecreaseCount, resetCategory }) {
 	const [filteredData, setFilteredData] = useState([]);
 	const [searchQuery, setSearchQuery] = useState('');
 	const [allData, setAllData] = useState([]);
+	const [copyText, setCopyText] = useState('');
 	const [dropdownOptions, setDropdownOptions] = useState({
 		all: 'All Items',
 	})
-
-	const tableHeaders = ['Amount', 'Carbohydrates', 'Proteins', 'Fats', 'Energy'];
 
 	useEffect(() => {
 		const allItemsCollection = [];
@@ -102,7 +102,7 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 						proteins: i.proteins - i.default.proteins,
 						fats: (i.fats - i.default.fats),
 						energy: i.energy - i.default.energy
-					 }
+					}
 				})
 
 			});
@@ -114,12 +114,13 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 	function handleSearch(event) {
 		const inputValue = event.target.value;
 		setSearchQuery(inputValue);
-
 		if (inputValue.length > 2) {
 			setTimeout(() => {
 				setFilteredData(searchedData(searchQuery));
 			}, 300)
+			setAllData([]);
 		} else {
+
 			setFilteredData([]);
 			resetCategory('all');
 		}
@@ -181,9 +182,47 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 				} else {
 					return { ...item }
 				}
-
 			});
 			setFilteredData(updatedItems)
+		}
+	}
+
+	async function handleCopyText(text, event) {
+		if (document.querySelector('td.copied')) {
+			document.querySelector('td.copied').classList.remove('copied')
+		}
+		event.currentTarget.classList.add('copied')
+		try {
+			setCopyText(text)
+			const value = Number(text).toFixed(2);
+
+			await navigator.clipboard.writeText(value)
+			toast.success('Copied Successfully!', {
+				position: "top-center",
+				autoClose: 1000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: false,
+				progress: undefined,
+				theme: "light",
+				transition: Bounce,
+			});
+
+		}
+		catch(e) {
+			console.error("Failed to copy text", e);
+			toast.error('Failed to copy text! Call Shashank :)', {
+				position: "top-center",
+				autoClose: 1000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: false,
+				progress: undefined,
+				theme: "light",
+				transition: Bounce,
+			});
 		}
 	}
 
@@ -239,10 +278,48 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 									<td className='text-center px-3 py-1'>
 										<input className="text-center border-0" type="text" name="filtered-quantity" style={{maxWidth: '80px'}} defaultValue={item.quantity} onKeyUp={() => handleItemUpdate(item)} />
 									</td>
-									<td className='text-center px-3 py-1'>{item.carbohydrates ? (item.carbohydrates).toFixed(2) : '--' }</td>
-									<td className='text-center px-3 py-1'>{(item.proteins).toFixed(2)}</td>
-									<td className='text-center px-3 py-1'>{(item.fats).toFixed(2)}</td>
-									<td className='text-center px-3 py-1'>{Math.round(item.energy)}</td>
+									<td className='text-center cursor-pointer px-3 py-1' onClick={(event) => handleCopyText(item.carbohydrates, event)}
+									dangerouslySetInnerHTML={{__html: item.carbohydrates ? `<span class="d-flex gap-3 items-center block">
+									${(item.carbohydrates).toFixed(2)}
+									<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M20.9983 10C20.9862 7.82497 20.8897 6.64706 20.1213 5.87868C19.2426 5 17.8284 5 15 5H12C9.17157 5 7.75736 5 6.87868 5.87868C6 6.75736 6 8.17157 6 11V16C6 18.8284 6 20.2426 6.87868 21.1213C7.75736 22 9.17157 22 12 22H15C17.8284 22 19.2426 22 20.1213 21.1213C21 20.2426 21 18.8284 21 16V15" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+										<path d="M3 10V16C3 17.6569 4.34315 19 6 19M18 5C18 3.34315 16.6569 2 15 2H11C7.22876 2 5.34315 2 4.17157 3.17157C3.51839 3.82475 3.22937 4.69989 3.10149 6" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+									</svg>
+								</span>` : '--'}}>
+									</td>
+									<td className='text-center cursor-pointer px-3 py-1'
+										onClick={(event) => handleCopyText(item.proteins, event)}
+										dangerouslySetInnerHTML={{
+										__html: `<span class="d-flex gap-3 items-center block">
+										${(item.proteins).toFixed(2)}
+										<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M20.9983 10C20.9862 7.82497 20.8897 6.64706 20.1213 5.87868C19.2426 5 17.8284 5 15 5H12C9.17157 5 7.75736 5 6.87868 5.87868C6 6.75736 6 8.17157 6 11V16C6 18.8284 6 20.2426 6.87868 21.1213C7.75736 22 9.17157 22 12 22H15C17.8284 22 19.2426 22 20.1213 21.1213C21 20.2426 21 18.8284 21 16V15" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+											<path d="M3 10V16C3 17.6569 4.34315 19 6 19M18 5C18 3.34315 16.6569 2 15 2H11C7.22876 2 5.34315 2 4.17157 3.17157C3.51839 3.82475 3.22937 4.69989 3.10149 6" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+										</svg>
+									</span>`}}
+									></td>
+									<td className='text-center cursor-pointer px-3 py-1'
+										onClick={(event) => handleCopyText(item.fats, event)}
+										dangerouslySetInnerHTML={{
+										__html: `<span class="d-flex gap-3 items-center block">
+										${(item.fats).toFixed(2)}
+										<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M20.9983 10C20.9862 7.82497 20.8897 6.64706 20.1213 5.87868C19.2426 5 17.8284 5 15 5H12C9.17157 5 7.75736 5 6.87868 5.87868C6 6.75736 6 8.17157 6 11V16C6 18.8284 6 20.2426 6.87868 21.1213C7.75736 22 9.17157 22 12 22H15C17.8284 22 19.2426 22 20.1213 21.1213C21 20.2426 21 18.8284 21 16V15" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+											<path d="M3 10V16C3 17.6569 4.34315 19 6 19M18 5C18 3.34315 16.6569 2 15 2H11C7.22876 2 5.34315 2 4.17157 3.17157C3.51839 3.82475 3.22937 4.69989 3.10149 6" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+										</svg>
+									</span>`}}
+									></td>
+									<td className='text-center cursor-pointer px-3 py-1'
+										onClick={(event) => handleCopyText(item.energy, event)}
+										dangerouslySetInnerHTML={{
+										__html: `<span class="d-flex gap-3 items-center block">
+										${Math.round(item.energy)}
+										<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M20.9983 10C20.9862 7.82497 20.8897 6.64706 20.1213 5.87868C19.2426 5 17.8284 5 15 5H12C9.17157 5 7.75736 5 6.87868 5.87868C6 6.75736 6 8.17157 6 11V16C6 18.8284 6 20.2426 6.87868 21.1213C7.75736 22 9.17157 22 12 22H15C17.8284 22 19.2426 22 20.1213 21.1213C21 20.2426 21 18.8284 21 16V15" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+											<path d="M3 10V16C3 17.6569 4.34315 19 6 19M18 5C18 3.34315 16.6569 2 15 2H11C7.22876 2 5.34315 2 4.17157 3.17157C3.51839 3.82475 3.22937 4.69989 3.10149 6" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+										</svg>
+									</span>`}}
+									></td>
 								</tr>
 							)})
 						}
@@ -271,10 +348,46 @@ export default function FilteredData({ data, exchangeCount, category, handleDrop
 											<td className='text-center px-3 py-1'>
 												<input className="text-center border-0" type="text" name="quantity" id="" defaultValue={i.quantity} style={{maxWidth: '80px'}} onKeyUp={() => handleItemUpdate(i)} />
 											</td>
-											<td className='text-center px-3 py-1'>{i.carbohydrates ? (i.carbohydrates).toFixed(2) : '--' }</td>
-											<td className='text-center px-3 py-1'>{(i.proteins).toFixed(2)}</td>
-											<td className='text-center px-3 py-1'>{(i.fats).toFixed(2)}</td>
-											<td className='text-center px-3 py-1'>{ Math.round(i.energy)}</td>
+											<td className='text-center cursor-pointer px-3 py-1'
+												onClick={(event) => handleCopyText(i.carbohydrates, event)}
+												dangerouslySetInnerHTML={{__html: i.carbohydrates ? `<span class="d-flex gap-3 items-center block">
+													${(i.carbohydrates).toFixed(2)}
+													<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M20.9983 10C20.9862 7.82497 20.8897 6.64706 20.1213 5.87868C19.2426 5 17.8284 5 15 5H12C9.17157 5 7.75736 5 6.87868 5.87868C6 6.75736 6 8.17157 6 11V16C6 18.8284 6 20.2426 6.87868 21.1213C7.75736 22 9.17157 22 12 22H15C17.8284 22 19.2426 22 20.1213 21.1213C21 20.2426 21 18.8284 21 16V15" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+														<path d="M3 10V16C3 17.6569 4.34315 19 6 19M18 5C18 3.34315 16.6569 2 15 2H11C7.22876 2 5.34315 2 4.17157 3.17157C3.51839 3.82475 3.22937 4.69989 3.10149 6" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+													</svg>
+												</span>` : '--'}}>
+											</td>
+											<td className='text-center cursor-pointer px-3 py-1'
+												onClick={(event) => handleCopyText(i.proteins, event)}
+												dangerouslySetInnerHTML={{
+													__html: `<span class="d-flex gap-3 items-center block">
+													${(i.proteins).toFixed(2)}
+													<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M20.9983 10C20.9862 7.82497 20.8897 6.64706 20.1213 5.87868C19.2426 5 17.8284 5 15 5H12C9.17157 5 7.75736 5 6.87868 5.87868C6 6.75736 6 8.17157 6 11V16C6 18.8284 6 20.2426 6.87868 21.1213C7.75736 22 9.17157 22 12 22H15C17.8284 22 19.2426 22 20.1213 21.1213C21 20.2426 21 18.8284 21 16V15" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+														<path d="M3 10V16C3 17.6569 4.34315 19 6 19M18 5C18 3.34315 16.6569 2 15 2H11C7.22876 2 5.34315 2 4.17157 3.17157C3.51839 3.82475 3.22937 4.69989 3.10149 6" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+													</svg>
+												</span>`}}></td>
+											<td className='text-center cursor-pointer px-3 py-1'
+												onClick={(event) => handleCopyText(i.fats, event)}
+												dangerouslySetInnerHTML={{
+													__html: `<span class="d-flex gap-3 items-center block">
+													${(i.fats).toFixed(2)}
+													<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M20.9983 10C20.9862 7.82497 20.8897 6.64706 20.1213 5.87868C19.2426 5 17.8284 5 15 5H12C9.17157 5 7.75736 5 6.87868 5.87868C6 6.75736 6 8.17157 6 11V16C6 18.8284 6 20.2426 6.87868 21.1213C7.75736 22 9.17157 22 12 22H15C17.8284 22 19.2426 22 20.1213 21.1213C21 20.2426 21 18.8284 21 16V15" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+														<path d="M3 10V16C3 17.6569 4.34315 19 6 19M18 5C18 3.34315 16.6569 2 15 2H11C7.22876 2 5.34315 2 4.17157 3.17157C3.51839 3.82475 3.22937 4.69989 3.10149 6" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+													</svg>
+												</span>`}}></td>
+											<td className='text-center cursor-pointer px-3 py-1'
+												onClick={(event) => handleCopyText(i.energy, event)}
+												dangerouslySetInnerHTML={{
+													__html: `<span class="d-flex gap-3 items-center block">
+													${Math.round(i.energy)}
+													<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M20.9983 10C20.9862 7.82497 20.8897 6.64706 20.1213 5.87868C19.2426 5 17.8284 5 15 5H12C9.17157 5 7.75736 5 6.87868 5.87868C6 6.75736 6 8.17157 6 11V16C6 18.8284 6 20.2426 6.87868 21.1213C7.75736 22 9.17157 22 12 22H15C17.8284 22 19.2426 22 20.1213 21.1213C21 20.2426 21 18.8284 21 16V15" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+														<path d="M3 10V16C3 17.6569 4.34315 19 6 19M18 5C18 3.34315 16.6569 2 15 2H11C7.22876 2 5.34315 2 4.17157 3.17157C3.51839 3.82475 3.22937 4.69989 3.10149 6" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+													</svg>
+												</span>`}}></td>
 										</tr>
 									)})
 								}

@@ -1,4 +1,6 @@
 import { promises as fs } from 'fs';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Dropdown from './Components/Dropdown';
 
 
@@ -11,6 +13,7 @@ export default async function Home() {
       <div className='mb-5'>
         <Dropdown props={data} />
       </div>
+      <ToastContainer />
   </div>
   );
 }
